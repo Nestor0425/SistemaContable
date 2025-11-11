@@ -1,0 +1,5 @@
+{
+  "name": "FactuPro™ - SIF Invoicing by Heartize™",
+  "description": "A comprehensive digital invoicing application built with React and Tailwind CSS. It complies with Spanish SIF regulations (RD 1007/2023), supporting both NO_VERIFACTU and VERIFACTU modes. The app includes quote management, invoice creation from quotes, customizable templates, and detailed item lines with discounts.",
+  "requestFramePermissions": []
+}

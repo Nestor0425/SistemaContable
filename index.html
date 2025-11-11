@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FactuPro™</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+      :root {
+        --color-primary: #000000;
+        --color-primary-10: rgba(0,0,0,0.1);
+        --color-primary-20: rgba(0,0,0,0.2);
+        --color-secondary: #f9fafb;
+        --color-surface: #ffffff;
+        --color-accent: #00a4a6;
+        --color-success: #10B981;
+        --color-danger: #F87171;
+        --color-warning: #FBBF24;
+        --color-info: #6366F1;
+        --color-text-primary: #1f2937;
+        --color-text-secondary: #6b7280;
+        --color-border-color: #e5e7eb;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': 'var(--color-primary)',
+              'primary-10': 'var(--color-primary-10)',
+              'primary-20': 'var(--color-primary-20)',
+              'secondary': 'var(--color-secondary)',
+              'surface': 'var(--color-surface)',
+              'accent': 'var(--color-accent)',
+              'accent-10': 'rgba(0, 164, 166, 0.1)',
+              'accent-20': 'rgba(0, 164, 166, 0.2)',
+              'success': 'var(--color-success)',
+              'success-10': 'rgba(16, 185, 129, 0.1)',
+              'success-20': 'rgba(16, 185, 129, 0.2)',
+              'danger': 'var(--color-danger)',
+              'danger-10': 'rgba(248, 113, 113, 0.1)',
+              'danger-20': 'rgba(248, 113, 113, 0.2)',
+              'warning': 'var(--color-warning)',
+              'warning-10': 'rgba(251, 191, 36, 0.1)',
+              'warning-20': 'rgba(251, 191, 36, 0.2)',
+              'info': 'var(--color-info)',
+              'info-10': 'rgba(99, 102, 241, 0.1)',
+              'info-20': 'rgba(99, 102, 241, 0.2)',
+              'text-primary': 'var(--color-text-primary)',
+              'text-secondary': 'var(--color-text-secondary)',
+              'text-secondary-10': 'rgba(107, 114, 128, 0.1)',
+              'border-color': 'var(--color-border-color)',
+            },
+            keyframes: {
+              'soft-pulse': {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0.7' },
+              }
+            },
+            animation: {
+              'soft-pulse': 'soft-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .printable-area, .printable-area * {
+          visibility: visible;
+        }
+        .printable-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+        .no-print {
+            display: none !important;
+        }
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 20
+      }
+      /* Custom thin scrollbar */
+      .thin-scrollbar::-webkit-scrollbar {
+        width: 2px;
+      }
+      .thin-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .thin-scrollbar::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary-20);
+        border-radius: 2px;
+      }
+      .thin-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-primary);
+      }
+      /* For Firefox */
+      .thin-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-primary) var(--color-surface);
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-secondary text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
